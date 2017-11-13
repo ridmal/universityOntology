@@ -1,0 +1,1819 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/rid/ontologies/2017/10/universityCources"
+     xml:base="http://www.semanticweb.org/rid/ontologies/2017/10/universityCources"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:universityCoursesNew="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:universityCources="http://www.semanticweb.org/rid/ontologies/2017/10/universityCources#"
+     xmlns:universityCourses="http://www.semanticweb.org/rid/ontologies/2017/10/universityCourses#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew/1.0.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#FacultyOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#FacultyOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Faculty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Department"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UniversityOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UniversityOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#hasUniversity"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#University"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Faculty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#belongsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#belongsTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduateStudents"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#belongsTo"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#level"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#departmentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#departmentOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#hasDepartment"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Department"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Courses"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#enrolls -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#enrolls">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#follows"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Student"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#enrolls"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Courses"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#follows -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#follows">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Courses"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Student"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#hasCredits -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#hasCredits">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Courses"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#hasCredits"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CreditsForCourse"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#hasDepartment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#hasDepartment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Courses"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Department"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#hasFaculty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#hasFaculty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Department"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Faculty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#hasLecturer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#hasLecturer">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#lecturerOF"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Courses"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lecturer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#hasMaterial -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#hasMaterial">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Courses"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#hasMaterial"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CourseMaterial"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#hasUniversity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#hasUniversity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Faculty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#University"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#instructBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#instructBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#instructorOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Courses"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#instructBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Instructor"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#instructorOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#instructorOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Instructor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Courses"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#lecturerOF -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#lecturerOF">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lecturer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Courses"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#materialOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#materialOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CourseMaterial"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Courses"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#requires -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#requires">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#requiresFor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#JobTitle"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Courses"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#requiresFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#requiresFor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Courses"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#hasMaterial"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#JobTitle"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Address -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Address"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Contact -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Contact"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#StudentIndexNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#StudentIndexNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Weeks -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Weeks">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#credits -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#credits">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CreditsForCourse"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#email -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#email">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lecturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#fullName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#fullName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lecturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#name">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Courses"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Department"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Faculty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#JobTitle"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#University"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#telNo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#telNo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lecturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#url -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#url">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CourseMaterial"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#AITechnologiesCourses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#AITechnologiesCourses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#AdvanceMathematics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#AdvanceMathematics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MathematicsCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#AeronauticalEngineeringCourses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#AeronauticalEngineeringCourses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Algorithms -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Algorithms">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ProgrammingCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Architecture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Architecture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Faculty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Art -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Art">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Faculty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Audio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Audio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CourseMaterial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Automata -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Automata">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputerScienceCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#BasicComputerNetwork -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#BasicComputerNetwork">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputerNetworkCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#BasicEnglish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#BasicEnglish">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#EnglishCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#BasicMathematics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#BasicMathematics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MathematicsCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Business -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Business">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Faculty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#BusinessAnaltytics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#BusinessAnaltytics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#BusinessCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#BusinessCourses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#BusinessCourses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CivilEngineeringDepartment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CivilEngineeringDepartment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ClusterComputing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ClusterComputing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputerNetworkCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Communation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Communation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#EnglishCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputationalAerodynamics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputationalAerodynamics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#AeronauticalEngineeringCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputationalMathematicsDepartment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputationalMathematicsDepartment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputerDataManagementCourses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputerDataManagementCourses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputerHardwareCourses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputerHardwareCourses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputerNetworkCourses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputerNetworkCourses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputerScienceCourses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputerScienceCourses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputerSecurityCourses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputerSecurityCourses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CourseMaterial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CourseMaterial">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#materialOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Courses"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Courses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Courses">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#follows"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Student"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#hasLecturer"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lecturer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#hasMaterial"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CourseMaterial"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <foaf:name>Courses</foaf:name>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CreditsForCourse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CreditsForCourse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#DatabaseManagement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#DatabaseManagement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputerDataManagementCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Department -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Department">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#DigitalSystems -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#DigitalSystems">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputerHardwareCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Documents -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Documents">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CourseMaterial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ElectricalEngineeringCourses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ElectricalEngineeringCourses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ElectricalEngineeringDepartment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ElectricalEngineeringDepartment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#EmbeddedSystems -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#EmbeddedSystems">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputerHardwareCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Faculty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#EnglishCourses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#EnglishCourses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Faculty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Faculty">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#hasUniversity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#University"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#FinancilaManagement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#FinancilaManagement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ManagementCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#GPA -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#GPA">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CreditsForCourse"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#HardwarePrgramming -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#HardwarePrgramming">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ProgrammingCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#InformationManagement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#InformationManagement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ManagementCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#InformationSecurity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#InformationSecurity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputerSecurityCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#InformationTechnology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#InformationTechnology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Faculty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#InformatonTechnologyDepartment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#InformatonTechnologyDepartment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Instructor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Instructor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Persons"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#InterdisciplinaryStudeisDepartment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#InterdisciplinaryStudeisDepartment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#JobTitle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#JobTitle">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#LandScapeCourses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#LandScapeCourses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#LandScapeHistory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#LandScapeHistory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#LandScapeCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lecturer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lecturer">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Persons"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#lecturerOF"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Courses"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Persons"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Student"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Low -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Low">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Faculty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MSCInArtificialIntelligence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MSCInArtificialIntelligence">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#PostGraduate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MSCInInformationTechnology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MSCInInformationTechnology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#PostGraduate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MachineLearning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MachineLearning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#AITechnologiesCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ManagementCourses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ManagementCourses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MarketingCourses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MarketingCourses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MaterialsScienceAndEngineeringDepartment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MaterialsScienceAndEngineeringDepartment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MathematicsCourses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MathematicsCourses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MathematicsDepartment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MathematicsDepartment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MechanicalDepartment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MechanicalDepartment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#NetworkSecurity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#NetworkSecurity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputerSecurityCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#NeuralNetwork -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#NeuralNetwork">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#AITechnologiesCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#NonGPA -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#NonGPA">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CreditsForCourse"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Persons -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Persons">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#PostGraduate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#PostGraduate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Courses"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#PostGraduateStudents -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#PostGraduateStudents">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Student"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#PrinicpalOfMarketing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#PrinicpalOfMarketing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MarketingCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ProgrammingCourses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ProgrammingCourses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#QualityAssurance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#QualityAssurance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#SoftwareTestingCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Robotics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Robotics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#AITechnologiesCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#SoftwarePrgramming -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#SoftwarePrgramming">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ProgrammingCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#SoftwareTestingCourses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#SoftwareTestingCourses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#SriLankanHistory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#SriLankanHistory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Student">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#enrolls"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Courses"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Persons"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#TechnologyManagement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#TechnologyManagement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ManagementCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#TextileAndClothingDepartment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#TextileAndClothingDepartment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#TransportAndLogisticDepartment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#TransportAndLogisticDepartment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#TransportRelatedCourses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#TransportRelatedCourses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#TransportSafety -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#TransportSafety">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#TransportRelatedCourses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Courses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduateStudents -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduateStudents">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#belongsTo"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#level"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Student"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#University -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#University">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#hasFaculty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Faculty"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ValuePartition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ValuePartition">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Video -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Video">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CourseMaterial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#level -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#level">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <rdfs:comment>A unversity courses onthology that describes various cource details</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CM1400 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CM1400">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#BasicMathematics"/>
+        <universityCoursesNew:hasCredits rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#GPACredits-4"/>
+        <universityCoursesNew:hasDepartment rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraCMDepart"/>
+        <universityCoursesNew:hasLecturer rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-06"/>
+        <universityCoursesNew:instructBy rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Ins-Saduni"/>
+        <universityCoursesNew:requiresFor rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Job-BusinessAnalyst"/>
+        <universityCoursesNew:requiresFor rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Job-QualityAssuranceEngineer"/>
+        <universityCoursesNew:requiresFor rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Job-SoftwareEnginer"/>
+        <universityCoursesNew:name>Basic Mathematics</universityCoursesNew:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CM2300 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CM2300">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#AdvanceMathematics"/>
+        <universityCoursesNew:hasDepartment rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraCMDepart"/>
+        <universityCoursesNew:hasLecturer rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-06"/>
+        <universityCoursesNew:name>Advance Mathematics</universityCoursesNew:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CM3100 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CM3100">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Automata"/>
+        <universityCoursesNew:hasDepartment rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraCMDepart"/>
+        <universityCoursesNew:hasLecturer rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-07"/>
+        <universityCoursesNew:name>Automata Theory</universityCoursesNew:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CM4200 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CM4200">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#NeuralNetwork"/>
+        <universityCoursesNew:follows rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#134021B"/>
+        <universityCoursesNew:hasCredits rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#GPACredits-2.5"/>
+        <universityCoursesNew:hasDepartment rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraCMDepart"/>
+        <universityCoursesNew:hasLecturer rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-02"/>
+        <universityCoursesNew:hasMaterial rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Video-Very_Basic_Intro_to_Neural_Networks"/>
+        <universityCoursesNew:hasMaterial rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Video-But_what__isa_Neural_Network?"/>
+        <universityCoursesNew:requiresFor rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Job-SoftwareEnginer"/>
+        <universityCoursesNew:name>Artifical Neural Network</universityCoursesNew:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ColmboLowFac -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ColmboLowFac">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Low"/>
+        <universityCoursesNew:hasUniversity rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ColomboUniversity"/>
+        <universityCoursesNew:name>Faculty Of Low</universityCoursesNew:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ColomboITFac -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ColomboITFac">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#InformationTechnology"/>
+        <universityCoursesNew:hasUniversity rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ColomboUniversity"/>
+        <universityCoursesNew:name>Faculty Of Computer Science</universityCoursesNew:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ColomboUniversity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ColomboUniversity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#University"/>
+        <universityCoursesNew:name>University Of Colombo</universityCoursesNew:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#GPACredits-2.5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#GPACredits-2.5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#GPA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#GPACredits-4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#GPACredits-4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#GPA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IN1100 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IN1100">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#EmbeddedSystems"/>
+        <universityCoursesNew:hasDepartment rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraITDepart"/>
+        <universityCoursesNew:hasLecturer rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-05"/>
+        <universityCoursesNew:name>Digital Systems</universityCoursesNew:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IN1200 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IN1200">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#SoftwarePrgramming"/>
+        <universityCoursesNew:hasCredits rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#GPACredits-2.5"/>
+        <universityCoursesNew:hasDepartment rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraITDepart"/>
+        <universityCoursesNew:hasLecturer rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-01"/>
+        <universityCoursesNew:instructBy rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Ins-Akila"/>
+        <universityCoursesNew:instructBy rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Ins-Nishadhi"/>
+        <universityCoursesNew:name>C Programming</universityCoursesNew:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IN2100 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IN2100">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#DatabaseManagement"/>
+        <universityCoursesNew:hasDepartment rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraITDepart"/>
+        <universityCoursesNew:hasLecturer rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-09"/>
+        <universityCoursesNew:name>Database Systems</universityCoursesNew:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IN2300 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IN2300">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Algorithms"/>
+        <universityCoursesNew:hasDepartment rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraITDepart"/>
+        <universityCoursesNew:hasLecturer rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-09"/>
+        <universityCoursesNew:name>Data Structures and Algorithms</universityCoursesNew:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IN3100 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IN3100">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#BasicComputerNetwork"/>
+        <universityCoursesNew:hasDepartment rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraITDepart"/>
+        <universityCoursesNew:hasLecturer rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-12"/>
+        <universityCoursesNew:name>Computer Network</universityCoursesNew:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IN4200 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IN4200">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#NetworkSecurity"/>
+        <universityCoursesNew:hasDepartment rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraITDepart"/>
+        <universityCoursesNew:hasLecturer rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-10"/>
+        <universityCoursesNew:requiresFor rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Job-SoftwareEnginer"/>
+        <universityCoursesNew:name>Network Security</universityCoursesNew:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IS1345 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IS1345">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#BasicEnglish"/>
+        <universityCoursesNew:hasDepartment rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraISDepart"/>
+        <universityCoursesNew:hasLecturer rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-03"/>
+        <universityCoursesNew:name>Basic English</universityCoursesNew:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IS2134 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IS2134">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Communation"/>
+        <universityCoursesNew:hasCredits rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#NonGPACredits-2.5"/>
+        <universityCoursesNew:hasDepartment rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraISDepart"/>
+        <universityCoursesNew:hasLecturer rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-03"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IS2345 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IS2345">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#PrinicpalOfMarketing"/>
+        <universityCoursesNew:hasDepartment rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraISDepart"/>
+        <universityCoursesNew:hasLecturer rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-04"/>
+        <universityCoursesNew:instructBy rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Ins-Thilini"/>
+        <universityCoursesNew:name>Marketing Aspects</universityCoursesNew:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IS3100 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IS3100">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#InformationManagement"/>
+        <universityCoursesNew:hasDepartment rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraISDepart"/>
+        <universityCoursesNew:hasLecturer rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-08"/>
+        <universityCoursesNew:requiresFor rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Job-BusinessAnalyst"/>
+        <universityCoursesNew:name>Management Of information</universityCoursesNew:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IS4200 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IS4200">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#QualityAssurance"/>
+        <universityCoursesNew:hasDepartment rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraISDepart"/>
+        <universityCoursesNew:hasLecturer rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-11"/>
+        <universityCoursesNew:requiresFor rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Job-QualityAssuranceEngineer"/>
+        <universityCoursesNew:name>Qualirty Assurance</universityCoursesNew:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Ins-Akila -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Ins-Akila">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Instructor"/>
+        <universityCoursesNew:instructorOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IN1200"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Ins-Nishadhi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Ins-Nishadhi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Instructor"/>
+        <universityCoursesNew:instructorOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IN1200"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Ins-Saduni -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Ins-Saduni">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Instructor"/>
+        <universityCoursesNew:instructorOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CM1400"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Ins-Thilini -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Ins-Thilini">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Instructor"/>
+        <universityCoursesNew:instructorOf rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IS2345"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Job-BusinessAnalyst -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Job-BusinessAnalyst">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#JobTitle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Job-QualityAssuranceEngineer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Job-QualityAssuranceEngineer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#JobTitle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Job-SoftwareEnginer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Job-SoftwareEnginer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#JobTitle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lecturer"/>
+        <universityCoursesNew:email>lochandaka@uom.lk</universityCoursesNew:email>
+        <universityCoursesNew:fullName>Dr.Lochandaka Ranathunga</universityCoursesNew:fullName>
+        <universityCoursesNew:telNo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2650894</universityCoursesNew:telNo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lecturer"/>
+        <universityCoursesNew:email>subhaf@uom.lk</universityCoursesNew:email>
+        <universityCoursesNew:fullName>Dr. (Mrs.) Subha Fernando</universityCoursesNew:fullName>
+        <universityCoursesNew:telNo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1234556</universityCoursesNew:telNo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lecturer"/>
+        <universityCoursesNew:email>sumuduw@uom.lk</universityCoursesNew:email>
+        <universityCoursesNew:fullName>Mrs.WASN Wijetunge</universityCoursesNew:fullName>
+        <universityCoursesNew:telNo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12365484</universityCoursesNew:telNo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-04">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lecturer"/>
+        <universityCoursesNew:email>leelangas@uom.lk</universityCoursesNew:email>
+        <universityCoursesNew:fullName>Dr.BLD Seneviratne</universityCoursesNew:fullName>
+        <universityCoursesNew:telNo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14522365</universityCoursesNew:telNo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-05">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lecturer"/>
+        <universityCoursesNew:email>bhsudantha@uom.lk</universityCoursesNew:email>
+        <universityCoursesNew:fullName>Mr.B.H. Sudantha</universityCoursesNew:fullName>
+        <universityCoursesNew:telNo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">58123659</universityCoursesNew:telNo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-06 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-06">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lecturer"/>
+        <universityCoursesNew:email>dilinik@uom.lk</universityCoursesNew:email>
+        <universityCoursesNew:fullName>Mrs. K A Dilini T Kulawansa</universityCoursesNew:fullName>
+        <universityCoursesNew:telNo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2650893</universityCoursesNew:telNo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-07 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-07">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lecturer"/>
+        <universityCoursesNew:email>thusharip@uom.lk</universityCoursesNew:email>
+        <universityCoursesNew:fullName>Dr. (Mrs.)Thushari Silva</universityCoursesNew:fullName>
+        <universityCoursesNew:telNo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1451254</universityCoursesNew:telNo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-08 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-08">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lecturer"/>
+        <universityCoursesNew:email>thilini@uom.lk</universityCoursesNew:email>
+        <universityCoursesNew:fullName>Ms.GT Weerasuriya</universityCoursesNew:fullName>
+        <universityCoursesNew:telNo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1245754</universityCoursesNew:telNo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-09 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-09">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lecturer"/>
+        <universityCoursesNew:email>supunmali@uom.lk</universityCoursesNew:email>
+        <universityCoursesNew:fullName>Dr. Supunmali Ahangama</universityCoursesNew:fullName>
+        <universityCoursesNew:telNo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2457842</universityCoursesNew:telNo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lecturer"/>
+        <universityCoursesNew:email>firdhous@uom.lk</universityCoursesNew:email>
+        <universityCoursesNew:fullName>Dr. M.F.M. Firdhous</universityCoursesNew:fullName>
+        <universityCoursesNew:telNo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45412254</universityCoursesNew:telNo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lecturer"/>
+        <universityCoursesNew:email>krishan123@uom.lk</universityCoursesNew:email>
+        <universityCoursesNew:fullName>Krishan Nawarathna</universityCoursesNew:fullName>
+        <universityCoursesNew:telNo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2345678</universityCoursesNew:telNo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lec-12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Lecturer"/>
+        <universityCoursesNew:email>amalraj@uom.lk</universityCoursesNew:email>
+        <universityCoursesNew:fullName>Dr.C.R.J. Amalraj</universityCoursesNew:fullName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Level1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Level1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#level"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Level2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Level2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#level"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Level3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Level3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#level"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Level4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Level4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#level"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraCMDepart -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraCMDepart">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputationalMathematicsDepartment"/>
+        <universityCoursesNew:hasFaculty rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraITFac"/>
+        <universityCoursesNew:name>Department Of Computational Mathematics</universityCoursesNew:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraEngineeringFac -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraEngineeringFac">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Faculty"/>
+        <universityCoursesNew:hasUniversity rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoratuwaUniversity"/>
+        <universityCoursesNew:name>Faculty Of Engineering</universityCoursesNew:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraISDepart -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraISDepart">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#InterdisciplinaryStudeisDepartment"/>
+        <universityCoursesNew:hasFaculty rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraITFac"/>
+        <universityCoursesNew:name>Department Of Interdisciplinary Studies</universityCoursesNew:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraITDepart -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraITDepart">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#InformatonTechnologyDepartment"/>
+        <universityCoursesNew:hasFaculty rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraITFac"/>
+        <universityCoursesNew:name>Department Of Information Technology</universityCoursesNew:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraITFac -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoraITFac">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#InformationTechnology"/>
+        <universityCoursesNew:hasUniversity rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoratuwaUniversity"/>
+        <universityCoursesNew:name>Faculty Of Infomation Technology</universityCoursesNew:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoratuwaUniversity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MoratuwaUniversity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#University"/>
+        <universityCoursesNew:name>University Of Moratuwa</universityCoursesNew:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#NonGPACredits-2.5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#NonGPACredits-2.5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#NonGPA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Video-Very_Basic_Intro_to_Neural_Networks -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Video-Very_Basic_Intro_to_Neural_Networks">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Video"/>
+        <universityCoursesNew:url>https://www.youtube.com/watch?v=DG5-UyRBQD4</universityCoursesNew:url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#134021B -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#134021B">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduateStudents"/>
+        <universityCoursesNew:belongsTo rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Level4"/>
+        <universityCoursesNew:enrolls rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CM4200"/>
+        <universityCoursesNew:enrolls rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IN4200"/>
+        <universityCoursesNew:enrolls rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IS4200"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#134070F -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#134070F">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduateStudents"/>
+        <universityCoursesNew:belongsTo rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Level4"/>
+        <universityCoursesNew:enrolls rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CM4200"/>
+        <universityCoursesNew:enrolls rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IS4200"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#134085X -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#134085X">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduateStudents"/>
+        <universityCoursesNew:belongsTo rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Level4"/>
+        <universityCoursesNew:enrolls rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CM4200"/>
+        <universityCoursesNew:enrolls rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IS4200"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#134129M -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#134129M">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduateStudents"/>
+        <universityCoursesNew:belongsTo rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Level4"/>
+        <universityCoursesNew:enrolls rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IN4200"/>
+        <universityCoursesNew:enrolls rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IS4200"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#142546M -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#142546M">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduateStudents"/>
+        <universityCoursesNew:belongsTo rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Level3"/>
+        <universityCoursesNew:enrolls rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IN3100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#154572L -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#154572L">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduateStudents"/>
+        <universityCoursesNew:belongsTo rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Level2"/>
+        <universityCoursesNew:enrolls rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CM2300"/>
+        <universityCoursesNew:enrolls rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IN2300"/>
+        <universityCoursesNew:enrolls rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#IS2345"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#169542K -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#169542K">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#UnderGraduateStudents"/>
+        <universityCoursesNew:belongsTo rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Level1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Video-But_what__isa_Neural_Network? -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Video-But_what__isa_Neural_Network?">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Video"/>
+        <universityCoursesNew:url>https://www.youtube.com/watch?v=aircAruvnKk</universityCoursesNew:url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#AITechnologiesCourses"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#AeronauticalEngineeringCourses"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#BusinessCourses"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputerDataManagementCourses"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputerHardwareCourses"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputerNetworkCourses"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputerScienceCourses"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputerSecurityCourses"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ElectricalEngineeringCourses"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#EnglishCourses"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#LandScapeCourses"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ManagementCourses"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MarketingCourses"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MathematicsCourses"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ProgrammingCourses"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#SoftwareTestingCourses"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#TransportRelatedCourses"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Architecture"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Art"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Business"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Engineering"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#InformationTechnology"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#Low"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#CivilEngineeringDepartment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ComputationalMathematicsDepartment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#ElectricalEngineeringDepartment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#InformatonTechnologyDepartment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#InterdisciplinaryStudeisDepartment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MaterialsScienceAndEngineeringDepartment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MathematicsDepartment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#MechanicalDepartment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#TextileAndClothingDepartment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rid/ontologies/2017/10/universityCoursesNew#TransportAndLogisticDepartment"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
